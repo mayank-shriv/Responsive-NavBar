@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Nav Bar</title>
+
+  <!-- Material Symbols (icons) -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a class="brand" href="#">Bangmetric</a>
+
+        <!-- Desktop links -->
+        <ul class="nav-links">
+          <li><a href="#">Details</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Address</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+
+        <!-- Menu button for mobile -->
+        <button id="menuToggle"
+                class="menu-toggle"
+                aria-controls="mobileMenu"
+                aria-expanded="false"
+                aria-label="Open menu">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile sidebar / menu -->
+  <aside id="mobileMenu" class="mobile-menu" aria-hidden="true">
+    <button id="closeBtn" class="close-btn" aria-label="Close menu">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+
+    <ul class="mobile-links">
+      <li><a href="#">Login</a></li>
+      <li><a href="#">Details</a></li>
+      <li><a href="#">Address</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </aside>
+
+  <!-- overlay when menu open -->
+  <div id="overlay" class="overlay" hidden></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
